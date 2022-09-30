@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Characters List</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,8 +7,13 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let character of characters">
-      {{character.name}}
+    <ion-item *ngFor="let character of characters" button [routerLink]="[character.id]">
+      <ion-avatar slot="start">
+        <img [src]="character.image" alt="">
+      </ion-avatar>
+      <ion-label>
+        {{character.name}}
+      </ion-label>
     </ion-item>
   </ion-list>
 

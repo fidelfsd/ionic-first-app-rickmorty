@@ -1,9 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>character-detail</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button [text]="buttonText" defaultHref="/character">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Character Detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-text-center">
+  <h1>{{id}}</h1>
 </ion-content>
